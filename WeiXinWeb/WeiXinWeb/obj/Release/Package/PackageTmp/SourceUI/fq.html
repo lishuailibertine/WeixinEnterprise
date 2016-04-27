@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1, maximum-scale=1">
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="x-rim-auto-match" content="none">
+        <title>发起流程</title>
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css"> 
+        
+    </head>
+    <body>
+        
+        
+        <div class="add-contain">
+            <div class="db-contain-search"> 
+                    <div class="input-group col-md-4 col-md-offset-4 col-xs-12 col-sm-12">
+                      <input type="text" class="form-control" id="exampleInputAmount" placeholder="">
+                      <div class="input-group-addon"><a>搜索</a></div>
+                    </div>
+                </div>
+            <div class="creat-list-head">
+                <span class="fq-list-head"><i class="glyphicon glyphicon-triangle-bottom"></i></span>管网巡检
+            </div>
+            <div class="creat-list-body"  style="display:inline;">
+                <a href="creat-yh.html"><span class="badge menu-list add-blue"><i class="glyphicon glyphicon-random"></i></span>隐患上报流程</a>
+            </div>
+            
+            <div class="creat-list-head">
+                <span class="fq-list-head"><i class="glyphicon glyphicon-triangle-bottom"></i></span>日常办公
+            </div>
+            <div class="creat-list-body">
+                <a href="creat-bg.html"><span class="badge menu-list add-blue"><i class="glyphicon glyphicon-random"></i></span>办公用品申购流程</a>
+                <a href="creat-qj.html"><span class="badge menu-list add-blue"><i class="glyphicon glyphicon-random"></i></span>请假单</a>
+                <a href="creat-dh.html"><span class="badge menu-list add-blue"><i class="glyphicon glyphicon-random"></i></span>电话申请</a>
+                <a href="creat-bjb.html"><span class="badge menu-list add-blue"><i class="glyphicon glyphicon-random"></i></span>申请笔记本设备</a>
+                <a href="creat-ht.html"><span class="badge menu-list add-blue"><i class="glyphicon glyphicon-random"></i></span>合同审批</a>
+            </div>
+            
+            <div class="creat-list-head">
+                <span class="fq-list-head"><i class="glyphicon glyphicon-triangle-bottom"></i></span>工程管理
+            </div>
+            <div class="creat-list-body">
+                <a href="creat-my.html"><span class="badge menu-list add-blue"><i class="glyphicon glyphicon-random"></i></span>民用工程报装</a>
+                <a href="creat-my.html"><span class="badge menu-list add-blue"><i class="glyphicon glyphicon-random"></i></span>工业工程报装</a>
+                <a href="creat-my.html"><span class="badge menu-list add-blue"><i class="glyphicon glyphicon-random"></i></span>市街官网工程报装</a>
+                <a href="creat-my.html"><span class="badge menu-list add-blue"><i class="glyphicon glyphicon-random"></i></span>拆迁工程报装</a>
+                <a href="creat-my.html"><span class="badge menu-list add-blue"><i class="glyphicon glyphicon-random"></i></span>改线工程报装</a>
+                <a href="creat-my.html"><span class="badge menu-list add-blue"><i class="glyphicon glyphicon-random"></i></span>管网改造工程报装</a>
+            </div>
+            
+            <div class="creat-list-head">
+                <span class="fq-list-head"><i class="glyphicon glyphicon-triangle-bottom"></i></span>SCADA报警
+            </div>
+            <div class="creat-list-body">
+                <a href="creat-sca.html"><span class="badge menu-list add-blue"><i class="glyphicon glyphicon-random"></i></span>SCADA报警</a>
+            </div>
+            <div class="creat-list-head">
+                <span class="fq-list-head"><i class="glyphicon glyphicon-triangle-bottom"></i></span>行政类
+            </div>
+            <div class="creat-list-body">
+                <a href="creat-bf.html"><span class="badge menu-list add-blue"><i class="glyphicon glyphicon-random"></i></span>办公家具报废流程</a>
+                <a href="creat-gz.html"><span class="badge menu-list add-blue"><i class="glyphicon glyphicon-random"></i></span>公章使用申请</a>
+            </div>
+        </div>        
+         <script src="js/jquery-1.12.1.min.js"></script>
+         <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function () {
+            $(".creat-list-head").click(showFile);
+        })
+        function showFile() {
+            if ($(this).next(".creat-list-body").css("display") == "none") {
+                $(this).next(".creat-list-body").css("display", "inline");
+                $(this).addClass('creat-active');
+                $(this).children('')
+            } else {
+                $(this).next(".creat-list-body").css("display", "none");
+                 $(this).removeClass('creat-active');
+            }
+        } 
+    </script>
+    </body>
+</html>

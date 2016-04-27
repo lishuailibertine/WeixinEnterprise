@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DDB0F77D-E2CC-44BE-909E-54AB3C728291}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WeiXinWeb</RootNamespace>
+    <AssemblyName>WeiXinWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.1.2.3\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=1.2.3.490, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.1.2.3\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\3rd\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PubPlatform.Services.OrganizationService">
+      <HintPath>..\3rd\PubPlatform.Services.OrganizationService.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DLLServers\SLMessageServer.asmx" />
+    <Content Include="fileTest.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SLFileHandle.aspx" />
+    <Content Include="SLGlobalPage.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Properties\PublishProfiles\微信发布.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="scripts\ai.0.15.0-build58334.js" />
+    <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="SourceUI\bj.html" />
+    <Content Include="SourceUI\bjx.html" />
+    <Content Include="SourceUI\cg.html" />
+    <Content Include="SourceUI\cl.html" />
+    <Content Include="SourceUI\creat-bf.html" />
+    <Content Include="SourceUI\creat-bg.html" />
+    <Content Include="SourceUI\creat-bjb.html" />
+    <Content Include="SourceUI\creat-dh.html" />
+    <Content Include="SourceUI\creat-gz.html" />
+    <Content Include="SourceUI\creat-ht.html" />
+    <Content Include="SourceUI\creat-my.html" />
+    <Content Include="SourceUI\creat-qj.html" />
+    <Content Include="SourceUI\creat-sca.html" />
+    <Content Include="SourceUI\creat-yh.html" />
+    <Content Include="SourceUI\creat.html" />
+    <Content Include="SourceUI\cs.html" />
+    <Content Include="SourceUI\css\bootstrap.css" />
+    <Content Include="SourceUI\css\style.css" />
+    <Content Include="SourceUI\csx.html" />
+    <Content Include="SourceUI\db-cs.html" />
+    <Content Include="SourceUI\db-jj.html" />
+    <Content Include="SourceUI\db-zc.html" />
+    <Content Include="SourceUI\db-zy.html" />
+    <Content Include="SourceUI\db.html" />
+    <Content Include="SourceUI\fonts\bootstrap.css" />
+    <Content Include="SourceUI\fonts\style.css" />
+    <Content Include="SourceUI\fq.html" />
+    <Content Include="SourceUI\gd.html" />
+    <Content Include="SourceUI\images\cg.svg" />
+    <Content Include="SourceUI\images\cl.svg" />
+    <Content Include="SourceUI\images\db.svg" />
+    <Content Include="SourceUI\images\dt.jpg" />
+    <Content Include="SourceUI\images\fq.svg" />
+    <Content Include="SourceUI\images\gd.svg" />
+    <Content Include="SourceUI\images\lc.svg" />
+    <Content Include="SourceUI\images\tg.svg" />
+    <Content Include="SourceUI\images\tx.jpg" />
+    <Content Include="SourceUI\images\wtg.svg" />
+    <Content Include="SourceUI\images\zf.svg" />
+    <Content Include="SourceUI\index.html" />
+    <Content Include="SourceUI\js\bootstrap.js" />
+    <Content Include="SourceUI\js\bootstrap.min.js" />
+    <Content Include="SourceUI\js\jquery-1.12.1.min.js" />
+    <Content Include="SourceUI\js\npm.js" />
+    <Content Include="SourceUI\lctx-test.html" />
+    <Content Include="SourceUI\lctx.html" />
+    <Content Include="SourceUI\read.html" />
+    <Content Include="SourceUI\tg.html" />
+    <Content Include="SourceUI\wd.html" />
+    <Content Include="SourceUI\wtg.html" />
+    <Content Include="SourceUI\yb.html" />
+    <Content Include="SourceUI\zf.html" />
+    <Content Include="Util\Readme.txt" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebCallBack.aspx" />
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DLLServers\SLMessageServer.asmx.cs">
+      <DependentUpon>SLMessageServer.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="fileTest.aspx.cs">
+      <DependentUpon>fileTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fileTest.aspx.designer.cs">
+      <DependentUpon>fileTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataMemberAttribute.cs" />
+    <Compile Include="Models\SLAddressListModel.cs" />
+    <Compile Include="Models\SLMenuModel.cs" />
+    <Compile Include="Models\SLMessageModel.cs" />
+    <Compile Include="Models\SLWeixinGlobalModelcs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servers\SLMessageServer.cs" />
+    <Compile Include="SLFileHandle.aspx.cs">
+      <DependentUpon>SLFileHandle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SLFileHandle.aspx.designer.cs">
+      <DependentUpon>SLFileHandle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Util\SLHttpUpload.cs" />
+    <Compile Include="Util\SLJsonHelp.cs" />
+    <Compile Include="Util\JsonHelper.cs" />
+    <Compile Include="Util\SLLog.cs" />
+    <Compile Include="Util\SLCustomMenuRequest.cs" />
+    <Compile Include="Util\Cryptography.cs" />
+    <Compile Include="Util\Sample.cs" />
+    <Compile Include="Util\WXBizMsgCrypt.cs" />
+    <Compile Include="ViewModel\FileOperation\SLFileProcess.cs" />
+    <Compile Include="ViewModel\SLAddressRequest.cs" />
+    <Compile Include="ViewModel\SLBaseRequest.cs" />
+    <Compile Include="ViewModel\SLCommonGZLRequest.cs" />
+    <Compile Include="ViewModel\SLCommonQYXZSRequest.cs" />
+    <Compile Include="ViewModel\SLCustDelegate.cs" />
+    <Compile Include="ViewModel\SLEnterPriseClass.cs" />
+    <Compile Include="ViewModel\SLGZLAplicationRequest.cs" />
+    <Compile Include="ViewModel\SLMenuAttachData.cs" />
+    <Compile Include="ViewModel\SLMessageRequest.cs" />
+    <Compile Include="ViewModel\SLQYXZSRequestAplication.cs" />
+    <Compile Include="ViewModel\SLRequestDataOpertion.cs" />
+    <Compile Include="ViewModel\SLXMLParse.cs" />
+    <Compile Include="WebCallBack.aspx.cs">
+      <DependentUpon>WebCallBack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebCallBack.aspx.designer.cs">
+      <DependentUpon>WebCallBack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4415</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4415/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此项目引用这台计算机上缺少的 NuGet 程序包。使用 NuGet 程序包还原可下载这些程序包。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

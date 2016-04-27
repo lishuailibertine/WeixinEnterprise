@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>新建流程</title>
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css"> 
+    </head>
+    <body>
+        <div class="">
+        <header>
+            <nav class="head-list navbar-fixed-top">
+                <div class="head-main">
+                    <a class="head-back pull-left" href="index.html"><i class="glyphicon glyphicon-chevron-left"></a></i>
+                    <span>新建流程</span>
+                </div>
+            </nav>
+        </header> 
+        <div class="add-contain">
+            <ul class="col-md-12 add-center">
+            <li class="col-md-2 col-sm-4 col-xs-4 add-contain-list add-center-list">
+                <ul class="tabItemContainer ">
+                    <li><a class="tabItemCurrent">日常办公</a></li>
+                    <li><a>工程管理</a></li>
+                    <li><a>行政类</a></li>
+                    <li><a>企管类</a></li>
+                    <li><a>生产中心</a></li>
+                    <li><a>研发类</a></li>
+                    <li><a>营销中心</a></li>
+                    <li><a>信息类</a></li>
+                    <li><a>资产类</a></li>
+                </ul> 
+            </li>
+            <li class="col-md-10 col-sm-8 col-xs-8 add-contain-list">
+                    <div class="tabBodyContainer">
+                        <div class="tabBodyItem tabBodyCurrent">
+                            <!--<span class="badge">42</span>
+                            合同审批-->
+                            <div class="row">
+                              <div class="col-sm-6 col-md-3 col-xs-6">
+                                <div class="add-tab-right">
+                                   <a href="#"><span class="badge add-list-img add-green"><i class="glyphicon glyphicon-user"></i></span></a>
+                                  <div class="caption">
+                                    <h>合同审批</h>
+                                  </div>
+                                </div>
+                              </div>
+                                <div class="col-sm-6 col-md-3 col-xs-6">
+                                <div class="add-tab-right">
+                                   <a href="#"><span class="badge add-list-img add-blue"><i class="glyphicon glyphicon-check"></i></span></a>
+                                  <div class="caption">
+                                    <h>合同审批</h>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-sm-6 col-md-3 col-xs-6">
+                                <div class="add-tab-right">
+                                   <span class="badge add-list-img add-orange"><i class="glyphicon glyphicon-earphone"></i></span>
+                                  <div class="caption">
+                                    <h>电话申请</h>
+                                  </div>
+                                </div>
+                              </div>  
+                            </div>
+                        </div>
+                        <div class="tabBodyItem">
+                            <p>我是Tab选项卡2的内容</p>
+                            <p></p>
+                        </div>
+                        <div class="tabBodyItem">
+                            <p>我是Tab选项卡3的内容</p>
+                            <p></p>
+                        </div>
+                        <div class="tabBodyItem">
+                            <p>我是Tab选项卡4的内容</p>
+                            <p></p>
+                        </div>
+                        <div class="tabBodyItem">
+
+                        </div>
+                        <div class="tabBodyItem">
+                            <p>我是Tab选项卡5的内容</p>
+                            <p></p>
+                        </div>
+                        <div class="tabBodyItem">
+                            <p>我是Tab选项卡5的内容</p>
+                            <p></p>
+                        </div>
+                        <div class="tabBodyItem">
+                            <p>我是Tab选项卡5的内容</p>
+                            <p></p>
+                        </div>
+                    </div>
+            </li>
+                </ul>
+        </div>
+        </div>
+        <!--<nav class="navbar navbar-default navbar-fixed-bottom">
+          <div class="container">
+            ...
+          </div>
+        </nav>-->
+         <script src="js/jquery-1.12.1.min.js"></script>
+         <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(e) {
+                SidebarTabHandler.Init();
+            });
+            var SidebarTabHandler={
+                Init:function(){
+                    $(".tabItemContainer>li").click(function(){
+                        $(".tabItemContainer>li>a").removeClass("tabItemCurrent");
+                        $(".tabBodyItem").removeClass("tabBodyCurrent");
+                        $(this).find("a").addClass("tabItemCurrent");
+                        $($(".tabBodyItem")[$(this).index()]).addClass("tabBodyCurrent");
+                    });
+                }
+            }
+        </script>
+    </body>
+</html>

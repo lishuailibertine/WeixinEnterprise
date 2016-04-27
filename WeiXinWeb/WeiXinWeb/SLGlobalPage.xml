@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Enterprise>
+      <Token>588d</Token>
+      <AesKey >Kt8ouUh3DyU8r2JPHtX03QeniJNyKh6E78SvCXDVPbA</AesKey>
+      <CorpID>wx0460341a7137ee76</CorpID>
+      <Application>
+          <ApplicationOne  name="企业小助手" agentid="0" corpsecret="B3yn1AkNo7scwpuDpqBODfm56JahRYl1ysEH8Mb1ptBLJ44iTHK96suNFxpxHhso"> </ApplicationOne>
+          <ApplicationTwo  name="工作流" agentid="3" corpsecret="B3yn1AkNo7scwpuDpqBODfm56JahRYl1ysEH8Mb1ptBLJ44iTHK96suNFxpxHhso"> </ApplicationTwo>
+      </Application>
+</Enterprise>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <!--<link type="text/css" href="lib/jquery-ui-1.8.4.custom/css/smoothness/jquery-ui-1.8.4.custom.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="lib/raphael-min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui-1.8.4.custom/js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui-1.8.4.custom/js/jquery-ui-1.8.4.custom.min.js"></script>
+    <script type="text/javascript" src="myflow_bak_20160315_1.js"></script>
+    <script type="text/javascript" src="myflow.jpdl4.js"></script>
+    <script type="text/javascript" src="myflow.editors.js"></script>-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">-->
+    <link href="Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/myflow.css" rel="stylesheet" />
+    <link href="Content/JqueryUI/jquery-ui.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="Scripts/jquery-1.11.1.js"></script>
+    <script src="Scripts/WorkFlow/raphael-min.js"></script>
+    <script src="Content/JqueryUI/jquery-ui.js"></script>
+    <script src="Scripts/WorkFlow/myflow.js"></script>
+    <script src="Scripts/WorkFlow/myflow.jpdl.js"></script>
+    <script src="Scripts/WorkFlow/myflow.editors.js"></script>
+    <script type="text/javascript">
+
+    $(function() {
+        var history = {
+            "activeRects": {
+                "rects": [
+                    { "paths": [], "name": "主管领导审批" }
+                ]
+            },
+            "historyRects": {
+                "rects": [
+                    { "paths": ["TO 直属领导审批"], "name": "发起" },
+                    { "paths": ["TO 分支"], "name": "直属领导审批" },
+                    { "paths": ["TO 主管领导审批", "TO 总经理审批", "TO 部门经理审批"], "name": "分支" }
+                ]
+            }
+        };
+        $('#myflow').myflow($.extend(false, {
+                basePath: "",
+                restore: eval("({states:{rect1:{type:'start',text:{text:'发起'}, attr:{ x:409, y:10, width:50, height:50}, props:{text:{name:'text',label:'步骤名称',value:'发起',textType:'basicInfo',textTypeDes:'基本信息'},stepType:{name:'stepType',label:'步骤类型',value:'开始',textType:'basicInfo',textTypeDes:'基本信息'},formModule:{name:'formModule',label:'表单对象',value:'',formJson:'',formModuleGuid:'',bt_DomainXml:'',form_Html:'',textType:'formInfo',textTypeDes:'表单对象'},auditor:{name:'auditor',label:'责任人',value:'',bandJson:'',bandGuid:'',auditorScope:'',auditorType:'',auditorRightValue:'',auditorName:'',textType:'personInfo',textTypeDes:'责任人信息'},ccModule:{name:'ccModule',label:'抄送人',value:'',ccJson:'',ccGuid:'',auditorScope:'',auditorType:'',auditorRightValue:'',auditorName:'',textType:'personInfo',textTypeDes:'责任人信息'}}},rect2:{type:'task_single',text:{text:'直属领导审批'}, attr:{ x:386, y:116, width:100, height:50}, props:{text:{name:'text',label:'步骤名称',value:'直属领导审批',textType:'basicInfo',textTypeDes:'基本信息'},stepType:{name:'stepType',label:'步骤类型',value:'单人审批',textType:'basicInfo',textTypeDes:'基本信息'},formModule:{name:'formModule',label:'表单对象',value:'',formModuleGuid:'',bt_DomainXml:'',form_Html:'',textType:'formInfo',textTypeDes:'表单对象'},auditor:{name:'auditor',label:'责任人',value:'',bandJson:'',bandGuid:'',auditorScope:'',auditorType:'',auditorRightValue:'',auditorName:'',textType:'personInfo',textTypeDes:'责任人信息'},overpassday:{name:'overpassday',label:'超时时限(h)',value:'',textType:'personInfo',textTypeDes:'责任人信息'},desc:{name:'desc',label:'自动完成时限(h)',value:'',textType:'personInfo',textTypeDes:'责任人信息'},ccModule:{name:'ccModule',label:'抄送人',value:'',ccJson:'',ccGuid:'',auditorScope:'',auditorType:'',auditorRightValue:'',auditorName:'',textType:'personInfo',textTypeDes:'责任人信息'},candocmodify:{name:'candocmodify',label:'允许协商',value:'',textType:'stepInfo',textTypeDes:'功能属性'},canrollback:{name:'canrollback',label:'允许打回',value:'',textType:'stepInfo',textTypeDes:'功能属性'},cancancel:{name:'cancancel',label:'允许作废',value:'',textType:'stepInfo',textTypeDes:'功能属性'},candocnumber:{name:'candocnumber',label:'允许直接归档',value:'',textType:'stepInfo',textTypeDes:'功能属性'}}},rect3:{type:'fork',text:{text:'分支'}, attr:{ x:410, y:209, width:50, height:50}, props:{text:{name:'text',label:'显示',value:'分支',textType:'basicInfo'},temp1:{name:'temp1',label:'文本',value:'',textType:'basicInfo'},temp2:{name:'temp2',label:'选择',value:'',textType:'personInfo'}}},rect4:{type:'task_single',text:{text:'主管领导审批'}, attr:{ x:192, y:318, width:100, height:50}, props:{text:{name:'text',label:'步骤名称',value:'主管领导审批',textType:'basicInfo',textTypeDes:'基本信息'},stepType:{name:'stepType',label:'步骤类型',value:'单人审批',textType:'basicInfo',textTypeDes:'基本信息'},formModule:{name:'formModule',label:'表单对象',value:'',formModuleGuid:'',bt_DomainXml:'',form_Html:'',textType:'formInfo',textTypeDes:'表单对象'},auditor:{name:'auditor',label:'责任人',value:'',bandJson:'',bandGuid:'',auditorScope:'',auditorType:'',auditorRightValue:'',auditorName:'',textType:'personInfo',textTypeDes:'责任人信息'},overpassday:{name:'overpassday',label:'超时时限(h)',value:'',textType:'personInfo',textTypeDes:'责任人信息'},desc:{name:'desc',label:'自动完成时限(h)',value:'',textType:'personInfo',textTypeDes:'责任人信息'},ccModule:{name:'ccModule',label:'抄送人',value:'',ccJson:'',ccGuid:'',auditorScope:'',auditorType:'',auditorRightValue:'',auditorName:'',textType:'personInfo',textTypeDes:'责任人信息'},candocmodify:{name:'candocmodify',label:'允许协商',value:'',textType:'stepInfo',textTypeDes:'功能属性'},canrollback:{name:'canrollback',label:'允许打回',value:'',textType:'stepInfo',textTypeDes:'功能属性'},cancancel:{name:'cancancel',label:'允许作废',value:'',textType:'stepInfo',textTypeDes:'功能属性'},candocnumber:{name:'candocnumber',label:'允许直接归档',value:'',textType:'stepInfo',textTypeDes:'功能属性'}}},rect5:{type:'task_single',text:{text:'总经理审批'}, attr:{ x:385, y:317, width:100, height:50}, props:{text:{name:'text',label:'步骤名称',value:'总经理审批',textType:'basicInfo',textTypeDes:'基本信息'},stepType:{name:'stepType',label:'步骤类型',value:'单人审批',textType:'basicInfo',textTypeDes:'基本信息'},formModule:{name:'formModule',label:'表单对象',value:'',formModuleGuid:'',bt_DomainXml:'',form_Html:'',textType:'formInfo',textTypeDes:'表单对象'},auditor:{name:'auditor',label:'责任人',value:'',bandJson:'',bandGuid:'',auditorScope:'',auditorType:'',auditorRightValue:'',auditorName:'',textType:'personInfo',textTypeDes:'责任人信息'},overpassday:{name:'overpassday',label:'超时时限(h)',value:'',textType:'personInfo',textTypeDes:'责任人信息'},desc:{name:'desc',label:'自动完成时限(h)',value:'',textType:'personInfo',textTypeDes:'责任人信息'},ccModule:{name:'ccModule',label:'抄送人',value:'',ccJson:'',ccGuid:'',auditorScope:'',auditorType:'',auditorRightValue:'',auditorName:'',textType:'personInfo',textTypeDes:'责任人信息'},candocmodify:{name:'candocmodify',label:'允许协商',value:'',textType:'stepInfo',textTypeDes:'功能属性'},canrollback:{name:'canrollback',label:'允许打回',value:'',textType:'stepInfo',textTypeDes:'功能属性'},cancancel:{name:'cancancel',label:'允许作废',value:'',textType:'stepInfo',textTypeDes:'功能属性'},candocnumber:{name:'candocnumber',label:'允许直接归档',value:'',textType:'stepInfo',textTypeDes:'功能属性'}}},rect6:{type:'task_single',text:{text:'部门经理审批'}, attr:{ x:556, y:320, width:100, height:50}, props:{text:{name:'text',label:'步骤名称',value:'部门经理审批',textType:'basicInfo',textTypeDes:'基本信息'},stepType:{name:'stepType',label:'步骤类型',value:'单人审批',textType:'basicInfo',textTypeDes:'基本信息'},formModule:{name:'formModule',label:'表单对象',value:'',formModuleGuid:'',bt_DomainXml:'',form_Html:'',textType:'formInfo',textTypeDes:'表单对象'},auditor:{name:'auditor',label:'责任人',value:'',bandJson:'',bandGuid:'',auditorScope:'',auditorType:'',auditorRightValue:'',auditorName:'',textType:'personInfo',textTypeDes:'责任人信息'},overpassday:{name:'overpassday',label:'超时时限(h)',value:'',textType:'personInfo',textTypeDes:'责任人信息'},desc:{name:'desc',label:'自动完成时限(h)',value:'',textType:'personInfo',textTypeDes:'责任人信息'},ccModule:{name:'ccModule',label:'抄送人',value:'',ccJson:'',ccGuid:'',auditorScope:'',auditorType:'',auditorRightValue:'',auditorName:'',textType:'personInfo',textTypeDes:'责任人信息'},candocmodify:{name:'candocmodify',label:'允许协商',value:'',textType:'stepInfo',textTypeDes:'功能属性'},canrollback:{name:'canrollback',label:'允许打回',value:'',textType:'stepInfo',textTypeDes:'功能属性'},cancancel:{name:'cancancel',label:'允许作废',value:'',textType:'stepInfo',textTypeDes:'功能属性'},candocnumber:{name:'candocnumber',label:'允许直接归档',value:'',textType:'stepInfo',textTypeDes:'功能属性'}}},rect7:{type:'join',text:{text:'合并'}, attr:{ x:410, y:416, width:50, height:50}, props:{text:{name:'text',label:'显示',value:'合并'},temp1:{name:'temp1',label:'文本',value:''},temp2:{name:'temp2',label:'选择',value:''}}},rect8:{type:'end',text:{text:'结束'}, attr:{ x:409, y:633, width:50, height:50}, props:{text:{name:'text',label:'步骤名称',value:'结束',textType:'basicInfo',textTypeDes:'基本信息'},stepType:{name:'stepType',label:'步骤类型',value:'结束',textType:'basicInfo',textTypeDes:'基本信息'},formModule:{name:'formModule',label:'表单对象',value:'',formModuleGuid:'',bt_DomainXml:'',form_Html:'',textType:'formInfo',textTypeDes:'表单对象'},auditor:{name:'auditor',label:'责任人',value:'',bandJson:'',bandGuid:'',auditorScope:'',auditorType:'',auditorRightValue:'',auditorName:'',textType:'personInfo',textTypeDes:'责任人信息'},ccModule:{name:'ccModule',label:'抄送人',value:'',ccJson:'',ccGuid:'',auditorScope:'',auditorType:'',auditorRightValue:'',auditorName:'',textType:'personInfo',textTypeDes:'责任人信息'},overpassday:{name:'overpassday',label:'超时时限(h)',value:'',textType:'personInfo',textTypeDes:'责任人信息'},candocmodify:{name:'candocmodify',label:'允许协商',value:'',textType:'functionInfo',textTypeDes:'功能属性'},canrollback:{name:'canrollback',label:'允许打回',value:'',textType:'functionInfo',textTypeDes:'功能属性'},cancancel:{name:'cancancel',label:'允许作废',value:'',textType:'functionInfo',textTypeDes:'功能属性'}}},rect9:{type:'task_single',text:{text:'董事长审批'}, attr:{ x:384, y:528, width:100, height:50}, props:{text:{name:'text',label:'步骤名称',value:'董事长审批',textType:'basicInfo',textTypeDes:'基本信息'},stepType:{name:'stepType',label:'步骤类型',value:'单人审批',textType:'basicInfo',textTypeDes:'基本信息'},formModule:{name:'formModule',label:'表单对象',value:'',formModuleGuid:'',bt_DomainXml:'',form_Html:'',textType:'formInfo',textTypeDes:'表单对象'},auditor:{name:'auditor',label:'责任人',value:'',bandJson:'',bandGuid:'',auditorScope:'',auditorType:'',auditorRightValue:'',auditorName:'',textType:'personInfo',textTypeDes:'责任人信息'},overpassday:{name:'overpassday',label:'超时时限(h)',value:'',textType:'personInfo',textTypeDes:'责任人信息'},desc:{name:'desc',label:'自动完成时限(h)',value:'',textType:'personInfo',textTypeDes:'责任人信息'},ccModule:{name:'ccModule',label:'抄送人',value:'',ccJson:'',ccGuid:'',auditorScope:'',auditorType:'',auditorRightValue:'',auditorName:'',textType:'personInfo',textTypeDes:'责任人信息'},candocmodify:{name:'candocmodify',label:'允许协商',value:'',textType:'stepInfo',textTypeDes:'功能属性'},canrollback:{name:'canrollback',label:'允许打回',value:'',textType:'stepInfo',textTypeDes:'功能属性'},cancancel:{name:'cancancel',label:'允许作废',value:'',textType:'stepInfo',textTypeDes:'功能属性'},candocnumber:{name:'candocnumber',label:'允许直接归档',value:'',textType:'stepInfo',textTypeDes:'功能属性'}}}},paths:{path20:{from:'rect1',to:'rect2', dots:[],type:'nodePath',text:{text:'TO 直属领导审批'},textPos:{x:0,y:-10}, props:{text:{name:'text',label:'分支条件',value:'',textType:'conditionInfo',textTypeDes:'分支条件',hideValue:''}}},path23:{from:'rect3',to:'rect5', dots:[],type:'startForkPath',text:{text:'TO 总经理审批'},textPos:{x:0,y:-10}, props:{text:{name:'text',label:'分支条件',value:'',textType:'conditionInfo',textTypeDes:'分支条件',hideValue:''}}},path24:{from:'rect5',to:'rect7', dots:[],type:'endJoinPath',text:{text:'TO 合并'},textPos:{x:0,y:-10}, props:{text:{name:'text',label:'分支条件',value:'',textType:'conditionInfo',textTypeDes:'分支条件',hideValue:''}}},path25:{from:'rect2',to:'rect3', dots:[],type:'endForkPath',text:{text:'TO 分支'},textPos:{x:0,y:-10}, props:{text:{name:'text',label:'分支条件',value:'',textType:'conditionInfo',textTypeDes:'分支条件',hideValue:''}}},path26:{from:'rect4',to:'rect7', dots:[{x:240,y:440}],type:'endJoinPath',text:{text:'TO 合并'},textPos:{x:0,y:-10}, props:{text:{name:'text',label:'分支条件',value:'',textType:'conditionInfo',textTypeDes:'分支条件',hideValue:''}}},path27:{from:'rect3',to:'rect4', dots:[{x:241,y:237}],type:'startForkPath',text:{text:'TO 主管领导审批'},textPos:{x:0,y:-10}, props:{text:{name:'text',label:'分支条件',value:'',textType:'conditionInfo',textTypeDes:'分支条件',hideValue:''}}},path28:{from:'rect3',to:'rect6', dots:[{x:606,y:235}],type:'startForkPath',text:{text:'TO 部门经理审批'},textPos:{x:0,y:-10}, props:{text:{name:'text',label:'分支条件',value:'',textType:'conditionInfo',textTypeDes:'分支条件',hideValue:''}}},path29:{from:'rect6',to:'rect7', dots:[{x:606,y:437}],type:'endJoinPath',text:{text:'TO 合并'},textPos:{x:0,y:-10}, props:{text:{name:'text',label:'分支条件',value:'',textType:'conditionInfo',textTypeDes:'分支条件',hideValue:''}}},path30:{from:'rect7',to:'rect9', dots:[],type:'startJoinPath',text:{text:'TO 董事长审批'},textPos:{x:0,y:-10}, props:{text:{name:'text',label:'分支条件',value:'',textType:'conditionInfo',textTypeDes:'分支条件',hideValue:''}}},path31:{from:'rect9',to:'rect8', dots:[],type:'nodePath',text:{text:'TO 结束'},textPos:{x:0,y:-10}, props:{text:{name:'text',label:'分支条件',value:'',textType:'conditionInfo',textTypeDes:'分支条件',hideValue:''}}}},props:{props:{text:{name:'processname',label:'流程名称',value:'请假单',processGuid:'',textType:'basicInfo',textTypeDes:'基本信息'},processkind:{name:'processkind',label:'流程分类',value:'',processKindGuid:'652112EB-2BD0-45F1-B4E4-049244F4148D',textType:'basicInfo',textTypeDes:'基本信息'},isactive:{name:'isactive',label:'是否启用',value:'',textType:'basicInfo',textTypeDes:'基本信息'},allowautopass:{name:'allowautopass',label:'同一责任人跳过',value:'',textType:'basicInfo',textTypeDes:'基本信息'},description:{name:'description',label:'流程说明',value:'',textType:'basicInfo',textTypeDes:'基本信息'},formModule:{name:'formModule',label:'表单对象',value:'',formJson:'',formModuleGuid:'',bt_DomainXml:'',form_Html:'',textType:'formInfo',textTypeDes:'默认表单'},namecodingrule:{name:'namecodingrule',label:'流程标题',value:'',textType:'nameSetting',textTypeDes:'命名规则'},codecodingrule:{name:'codecodingrule',label:'流程编码',value:'',textType:'nameSetting',textTypeDes:'命名规则'},isautosave:{name:'isautosave',label:'允许自动归档',value:'',textType:'fileSetting',textTypeDes:'归档设置'},candatasave:{name:'candatasave',label:'	允许数据归档',value:'',textType:'fileSetting',textTypeDes:'归档设置'}}}})"),
+                editable: false
+        },
+            history
+        ));
+    });
+</script>
+<style type="text/css">
+body {
+  margin : 0;
+  padding: 0;
+  text-align: left;
+  font-family: Arial, sans-serif, Helvetica, Tahoma;
+  font-size: 12px;
+  line-height: 1.5;
+  color: black;
+  background-image: url(Content/Image/workflow/img/bg.png);
+}
+
+.node {
+	width : 70px;
+	text-align : center;
+	vertical-align:middle;
+	border: 1px solid #fff;
+}
+
+.mover{
+	border: 1px solid #ddd;
+	background-color: #ddd;
+}
+.selected{
+	background-color: #ddd;
+}
+.state{}
+
+#myflow_props table{
+	
+}
+#myflow_props th {
+	letter-spacing: 2px;
+	text-align: left;
+	padding: 6px;
+	background: #ddd;
+} 
+#myflow_props td {
+	background: #fff;
+	padding: 6px;
+} 
+
+#pointer {
+	background-repeat:no-repeat;
+	background-position:center;
+	
+}
+#path {
+	background-repeat:no-repeat;
+	background-position:center;
+	
+}
+#task{
+	background-repeat:no-repeat;
+	background-position:center;
+	
+}
+#state{
+	background-repeat:no-repeat;
+	background-position:center;
+	
+}
+</style>
+</head>
+<body >
+    <div class="add-contain">
+            <ul class="tab-top-list col-md-12">
+                <a class="col-md-4 col-sm-4 col-xs-4" href="lctx.html"><li>表单</li></a>
+                <a class="col-md-4 col-sm-4 col-xs-4  tab-top-click" href='lc.html'><li>流程图</li></a>
+                <a class="col-md-4 col-sm-4 col-xs-4" href="zt.html"><li>状态</li></a>
+            </ul>
+    </div>
+        <div id="myflow" style="width:800px;height:800px;margin:0 auto;">
+
+        </div>
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1, maximum-scale=1">
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="x-rim-auto-match" content="none">
+        <title>待办事宜</title>
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css"> 
+    </head>
+    <body>
+        <div class="add-contain">
+            <ul class="tab-top-list col-md-12">
+                <a class="col-md-4 col-sm-4 col-xs-4 tab-top-click"><li>表单</li></a>
+                <a class="col-md-4 col-sm-4 col-xs-4"><li>流程图</li></a>
+                <a class="col-md-4 col-sm-4 col-xs-4"><li>状态</li></a>
+            </ul>
+            <div class="creat-tab-container">
+                <div class="tab-top-contain tab-top-select">
+                    <div class="col-sm-12 col-md-12 col-xs-12">
+                    <div class="panel panel-blue portlet col-md-4 col-md-offset-4 col-sm-12 col-xs-12">
+                            <div class="panel-heading portlet-title">
+                                流程信息
+                            </div>  
+                            <div class="panel-collapse portlet-body" role="tabpanel" aria-labelledby="headingThree contact-card-body">
+                                    <div class="panel-body portlet-body creat-body">
+                                          <div class="col-md-12 col-sm-12 col-xs-12 lc-list">
+                                                <div class="col-md-4 col-sm-4 col-xs-4 text-right"><span>标题</span></div>
+                                                <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                                                    <span>请假流程-张三-2016-4-12</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 lc-list">
+                                                <div class="col-md-4 col-sm-4 col-xs-4 text-right"><span>重要性</span></div>
+                                                <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                                                    <span>重要</span>
+                                              </div>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 lc-list">
+                                                <div class="col-md-4 col-sm-4 col-xs-4 text-right"><span>短信提醒</span></div>
+                                                <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                                                    <span>离线提醒</span>
+                                              </div>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 lc-list">
+                                                <div class="col-md-4 col-sm-4 col-xs-4 text-right"><span>微信提醒</span></div>
+                                                <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                                                    <span>提醒</span>
+                                              </div>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 lc-list">
+                                                <div class="col-md-4 col-sm-4 col-xs-4 text-right"><span>日期</span></div>
+                                                <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                                                    <span>2016-04-23</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 lc-list">
+                                                <div class="col-md-4 col-sm-4 col-xs-4 text-right"><span>申请人</span></div>
+                                                <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                                                    <span>张三</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 lc-list">
+                                                <div class="col-md-4 col-sm-4 col-xs-4 text-right"><span>上级部门</span></div>
+                                                <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                                                    <span>基础研发中心</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 lc-list">
+                                                <div class="col-md-4 col-sm-4 col-xs-4 text-right"><span>分部</span></div>
+                                                <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                                                    <span>集团总部机关</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 lc-list">
+                                                <div class="col-md-4 col-sm-4 col-xs-4 text-right"><span>工号</span></div>
+                                                <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                                                    <span>H03422</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 lc-list">
+                                                <div class="col-md-4 col-sm-4 col-xs-4 text-right"><span>请假类别</span></div>
+                                                <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                                                    <span>事假</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 lc-list">
+                                                <div class="col-md-4 col-sm-4 col-xs-4 text-right"><span>请假起始时间</span></div>
+                                                <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                                                    <span>2016-04-23</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 lc-list">
+                                                <div class="col-md-4 col-sm-4 col-xs-4 text-right"><span>请假天数</span></div>
+                                                <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                                                    <span>1.5天</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 lc-list">
+                                                <div class="col-md-4 col-sm-4 col-xs-4 text-right"><span>请假事由</span></div>
+                                                <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                                                    <span>家中有事需要请假一天半</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="panel panel-blue portlet col-md-4 col-md-offset-4 col-sm-12 col-xs-12">
+                            <div class="panel-heading portlet-title">
+                                流转意见
+                            </div>  
+                            <div class="panel-collapse portlet-body" role="tabpanel" aria-labelledby="headingThree contact-card-body">
+                                    <div class="panel-body portlet-body creat-body">
+                                          <div class="col-md-12 col-sm-12 col-xs-12 lc-list">
+                                              <div class="lz-list-text">来自微信企业号</div>
+                                              <div class="lz-list lz-list-sec">
+                                                  <div>
+                                                      <span>
+                                                          郑州分中心/李四
+                                                      </span>
+                                                      <span>
+                                                          2016-04-24 8:00
+                                                      </span>
+                                                  </div>
+                                                  <div>
+                                                      <span>
+                                                         节点：部门负责人
+                                                      </span>
+                                                      <span>
+                                                          操作：同意
+                                                      </span>
+                                                  </div>
+                                                  <div>
+                                                      <span>
+                                                         接收人：张三
+                                                      </span>
+                                                  </div>
+                                              </div>
+                                              <div class="lz-list">
+                                                  <div>
+                                                      <span>
+                                                          郑州分中心/张三
+                                                      </span>
+                                                      <span>
+                                                          2016-04-24 8:20
+                                                      </span>
+                                                  </div>
+                                                  <div>
+                                                      <span>
+                                                         节点：主管领导
+                                                      </span>
+                                                      <span>
+                                                          操作：同意
+                                                      </span>
+                                                  </div>
+                                                  <div>
+                                                      <span>
+                                                         接收人：李四
+                                                      </span>
+                                                  </div>
+                                            </div>
+                                          </div>  
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="panel panel-blue portlet col-md-4 col-md-offset-4 col-sm-12 col-xs-12">
+                            <div class="panel-heading portlet-title">
+                                流转处理
+                            </div>
+                            <div class="panel-collapse portlet-body" role="tabpanel" aria-labelledby="headingThree contact-card-body">
+                                <div class="panel-body portlet-body creat-body">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 lc-list">
+                                        <div class="col-md-4 col-sm-4 col-xs-4 text-right text-need"><span>岗位信息</span></div>
+                                        <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                                            <select class="form-control text-input">
+                                                <option>软件开发工程师</option>
+                                                <option>项目经理</option>
+                                            </select>
+                                        </div>
+                                        <div class="bd-area-all"><textarea class="form-control" rows="3"></textarea></div> 
+                                        <div class="button-group">
+                                            <button type="button" class="btn btn-blue" data-toggle="modal" data-target="#Modal1" data-whatever="">保存</button>
+                                            <button type="button" class="btn btn-blue" data-toggle="modal" data-target="#Modal2" data-whatever="">同意</button>
+                                            <button type="button" class="btn btn-blue" data-toggle="modal" data-target="#Modal3" data-whatever="">不同意</button>
+                                            <button type="button" class="btn btn-blue" data-toggle="modal" data-target="#Modal4" data-whatever="">发起协商</button>
+                                            <button type="button" class="btn btn-blue" data-toggle="modal" data-target="#Modal5" data-whatever="">作废</button>
+                                            <div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                            <h4 class="modal-title" id="exampleModalLabel">流转信息</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                           <span class="badge right-message"><i class="glyphicon glyphicon-ok"></i></span>保存成功
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                            <h4 class="modal-title" id="exampleModalLabel">流转信息</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                           <span class="badge right-message"><i class="glyphicon glyphicon-ok"></i></span>已同意
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal fade" id="Modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                            <h4 class="modal-title" id="exampleModalLabel">流转信息</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                           <span class="badge wrong-message"><i class="glyphicon glyphicon-remove"></i></span>不同意
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal fade" id="Modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                            <h4 class="modal-title" id="exampleModalLabel">流转信息</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                           <span class="badge wrong-message"><i class="glyphicon glyphicon-ok"></i></span>发起协商
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal fade" id="Modal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                            <h4 class="modal-title" id="exampleModalLabel">流转信息</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                           <span class="badge wrong-message"><i class="glyphicon glyphicon-remove"></i></span>流程作废
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </div>
+                
+                <div class="tab-top-contain">
+                <div class="col-md-4 col-md-offset-4 col-sm-12 col-xs-12">
+                    <img src="images/db.svg" style="width:100%;height:100%" alt="">
+                </div>
+                </div>
+                
+                <div class="tab-top-contain">
+                    <div class="col-sm-12 col-md-12 col-xs-12">
+                        <div class="panel panel-blue portlet col-md-4 col-md-offset-4 col-sm-12 col-xs-12">
+                            <div class="panel-heading portlet-title">
+                                流程状态
+                            </div>  
+                            <div class="panel-collapse portlet-body" role="tabpanel" aria-labelledby="headingThree contact-card-body">
+                                    <div class="panel-body portlet-body creat-body">
+                                          <div class="col-md-12 col-sm-12 col-xs-12 lc-list">
+                                                <div class="col-md-4 col-sm-4 col-xs-4 text-right"><span>流程状态</span></div>
+                                                <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                                                    <span><!--流程状态--></span>
+                                                </div>
+                                            </div>
+                                          <div class="col-md-12 col-sm-12 col-xs-12 lc-list">
+                                                <div class="col-md-4 col-sm-4 col-xs-4 text-right"><span>已阅读人员</span></div>
+                                                <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                                                    <span><!--已阅读人员-->高志斌 杨光美</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 lc-list">
+                                                <div class="col-md-4 col-sm-4 col-xs-4 text-right"><span>已会签人员</span></div>
+                                                <div class="col-md-8 col-sm-8 col-xs-8 text-left">
+                                                    <span><!--已会签人员-->高志斌 杨光美</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="panel-blue col-md-4 col-md-offset-4 col-sm-12 col-xs-12">       
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-md-2 col-sm-2 col-xs-2 text-right zt-right"><span class="badge zt-right-message"><i class="glyphicon glyphicon-ok"></i></span></div>
+                                    <div class="col-md-10 col-sm-10 col-xs-10 text-left">
+                                        <div class="alert mui-alert alert-success" role="alert">
+                                            <ul class="mui-table-view zt-list-bottom">
+                                                <li class="mui-table-view-cell mui-media">
+                                                    
+                                                    <span class="badge  add-blue mui-media-object mui-pull-left"><i class="glyphicon glyphicon-user"></i></span>
+                                                    <div class="mui-media-body">
+                                                        
+                                                        <p class="db-list-head">张三</p>
+                                                        <p class="mui-ellipsis">发起流程</p>
+                                                    </div>
+                                                    <p class="mui-time">2016-04-12 13:20</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                            </div>
+                            
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-md-2 col-sm-2 col-xs-2 text-right zt-right"><span class="badge zt-right-message"><i class="glyphicon glyphicon-ok"></i></span></div>
+                                    <div class="col-md-10 col-sm-10 col-xs-10 text-left">
+                                        <div class="alert mui-alert alert-success" role="alert">
+                                            <ul class="mui-table-view">
+                                                <li class="mui-table-view-cell mui-media">
+                                                    
+                                                    <span class="badge  add-blue mui-media-object mui-pull-left"><i class="glyphicon glyphicon-user"></i></span>
+                                                    <div class="mui-media-body">
+                                                        
+                                                        <p class="db-list-head">部门负责人 高志斌</p>
+                                                        <p class="mui-ellipsis">审批通过</p>
+                                                    </div>
+                                                    <p class="mui-time">2016-04-12 15:30</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-md-2 col-sm-2 col-xs-2 text-right zt-right"><span class="badge zt-right-message"><i class="glyphicon glyphicon-ok"></i></span></div>
+                                    <div class="col-md-10 col-sm-10 col-xs-10 text-left">
+                                        <div class="alert mui-alert alert-success" role="alert">
+                                            <ul class="mui-table-view">
+                                                <li class="mui-table-view-cell mui-media">
+                                                    
+                                                    <span class="badge  add-blue mui-media-object mui-pull-left"><i class="glyphicon glyphicon-user"></i></span>
+                                                    <div class="mui-media-body">
+                                                        
+                                                        <p class="db-list-head">主管领导 杨广美</p>
+                                                        <p class="mui-ellipsis">审批通过</p>
+                                                    </div>
+                                                    <p class="mui-time">2016-04-12 16:30</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </div>  
+            
+        </div>
+         <script src="js/jquery-1.12.1.min.js"></script>
+         <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(e) {
+                SidebarTabHandler.Init();
+            });
+            var SidebarTabHandler={
+                Init:function(){
+                    $(".tab-top-list>a").click(function(){
+                        $(".tab-top-list>a").removeClass("tab-top-click");
+                        $(".tab-top-contain").removeClass("tab-top-select");
+                        $(this).addClass("tab-top-click");
+                        $($(".tab-top-contain")[$(this).index()]).addClass("tab-top-select");
+                    });
+                }
+            }
+        </script>
+    </body>
+</html>
